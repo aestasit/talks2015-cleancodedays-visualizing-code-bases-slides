@@ -1,0 +1,1158 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Visualizing code bases</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<link rel="stylesheet" href="themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 { color:#FFF; text-align:left; font-size:60px; }
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Visualizing code bases</h1>
+		<p>Andrey Adamovich, Aestas/IT</p>
+	</header>
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2></h2>
+			</header><img src="images/COVER_VIS.png" />
+		</section>
+	</div></div>	
+	
+    
+    
+       
+    <div class="slide shout" id="1"><div>
+        <section>
+			<header>
+				<h2>About me</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="2"><div>
+        <section>
+			<header>
+				<h2>Andrey Adamovich</h2>
+			</header>    
+            <ul> 
+ <li>Bio: Developer, coach, speaker, author</li> 
+ <li>Company: Aestas/IT (<a href="http://aestasit.com">http://aestasit.com</a>)</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="3"><div>
+        <section>
+			<header>
+				<h2>Contact details</h2>
+			</header>    
+            <ul> 
+ <li>E-mail: <a href="mailto:andrey@aestasit.com">andrey@aestasit.com</a></li> 
+ <li>Linkedin: <a href="http://www.linkedin.com/in/andreyadamovich">http://www.linkedin.com/in/andreyadamovich</a></li> 
+ <li>Lanyrd: <a href="http://lanyrd.com/profile/andrey-adamovich">http://lanyrd.com/profile/andrey-adamovich</a></li> 
+ <li>GitHub: <a href="https://github.com/aadamovich">https://github.com/aadamovich</a></li> 
+ <li>SO: <a href="http://stackoverflow.com/users/162792/andrey-adamovich">http://stackoverflow.com/users/162792/andrey-adamovich</a></li> 
+ <li>Twitter: @codingandrey, @aestasit</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="4"><div>
+        <section>
+			<header>
+				<h2>Let's start!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="5"><div>
+        <section>
+			<header>
+				<h2>Background</h2>
+			</header>    
+            <ul> 
+ <li>Find new clients</li> 
+ <li>Face big code bases</li> 
+ <li>Need quick analysis</li> 
+ <li>Need quick results</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="6"><div>
+        <section>
+			<header>
+				<h2>Code size</h2>
+			</header>    
+            <ul> 
+ <li>Google: 2 billions LOC</li> 
+ <li>Facebook: 61 million LOC</li> 
+ <li>Me: from 20K to 2M LOC</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="7"><div>
+        <section>
+			<header>
+				<h2>I hate reading...</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/HATE_READING.png" alt="hate" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="8"><div>
+        <section>
+			<header>
+				<h2>Reading code</h2>
+			</header>    
+            <pre>
+<code>I want this to work</code>
+<code>This just works</code>
+<code>Working is the definition of this block</code>
+<code>Work! You, stupid!</code>
+<code>The work should be here</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="9"><div>
+        <section>
+			<header>
+				<h2>It's life, Jim, but not as we know it!</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/SPOCK.jpg" alt="spock" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="10"><div><section><header><h2>Code is data!</h2></header> <img src="images/SPOCK.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="11"><div><section><header><h2>Well, big data</h2></header> <img src="images/BG_BIGDATA.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="12"><div>
+        <section>
+			<header>
+				<h2>Snapshot</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/SNAPSHOT.png" alt="s" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="13"><div>
+        <section>
+			<header>
+				<h2>Temporal</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/HISTORY.png" alt="s" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="14"><div>
+        <section>
+			<header>
+				<h2>First steps</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="15"><div>
+        <section>
+			<header>
+				<h2>Count the lines!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="16"><div>
+        <section>
+			<header>
+				<h2>Size does matter</h2>
+			</header>    
+            <ul> 
+ <li>Gives you an estimate (on how much reading is needed).</li> 
+ <li>Most of the code bases are <strong>polyglot</strong>. Ratio between languages can tell a lot.</li> 
+ <li>Ratio between test code, comments, blank lines is also interesting.</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="17"><div>
+        <section>
+			<header>
+				<h2>cloc</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/CLOC.png" alt="cloc" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="18"><div>
+        <section>
+			<header>
+				<h2>Usage</h2>
+			</header>    
+            <pre>
+<code>cloc --help</code>
+<code>cloc --write-lang-def=lang.defs</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="19"><div>
+        <section>
+			<header>
+				<h2>Usage</h2>
+			</header>    
+            <pre>
+<code>cloc --csv </code>
+<code>     --quite </code>
+<code>     --progress-rate=0</code>
+<code>     --ignored=files.ignored </code>
+<code>     --exclude-dir=test,build</code>
+<code>     --read-lang-def=lang.defs </code>
+<code>     --out=data.csv</code>
+<code>     .</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="20"><div>
+        <section>
+			<header>
+				<h2>Language definitions</h2>
+			</header>    
+            <pre>
+<code>Gradle</code>
+<code>    filter remove_matches ^\s*//</code>
+<code>    filter remove_inline //.*$</code>
+<code>    filter call_regexp_common C</code>
+<code>    extension gradle</code>
+<code>    3rd_gen_scale 4.10</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="21"><div>
+        <section>
+			<header>
+				<h2>Where are the pictures?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="22"><div>
+        <section>
+			<header>
+				<h2>We have stats, let's plot them!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="23"><div><section><header><h2>Excel? Probably not.</h2></header> <img src="images/DATA.png" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="24"><div>
+        <section>
+			<header>
+				<h2>Pie charts are boring!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="25"><div>
+        <section>
+			<header>
+				<h2>Infographics!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="26"><div>
+        <section>
+			<header>
+				<h2>d3.js</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/D3.png" alt="d3" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="27"><div>
+        <section>
+			<header>
+				<h2>d3.js</h2>
+			</header>    
+            <ul> 
+ <li>Javascript library for data visualizations</li> 
+ <li>Tons of examples</li> 
+ <li>Many libraries built on top of d3.js</li> 
+ <li>Several books</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="28"><div><section><header><h2>Example</h2></header> <img src="images/D3_DEMO.png" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="29"><div>
+        <section>
+			<header>
+				<h2>Many alternatives</h2>
+			</header>    
+            <ul> 
+ <li>vis.js</li> 
+ <li>raphael.js</li> 
+ <li>sigma.js</li> 
+ <li>many, many, many more</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="30"><div>
+        <section>
+			<header>
+				<h2>Tableau Public</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/TABLEAU.jpg" alt="t" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="31"><div>
+        <section>
+			<header>
+				<h2>Tableau Public</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/TABLEAU_DEMO.png" alt="t" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="32"><div>
+        <section>
+			<header>
+				<h2>Tableau Public</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/TABLEAU_TREE_DATA.png" alt="t" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="33"><div>
+        <section>
+			<header>
+				<h2>infogr.am</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/INFOGRAM.png" alt="t" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="34"><div>
+        <section>
+			<header>
+				<h2>infogr.am</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/INFOGRAM_DEMO.png" alt="t" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="35"><div>
+        <section>
+			<header>
+				<h2>Temporal analysis</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="36"><div>
+        <section>
+			<header>
+				<h2>GitHub</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/GITHUB_COMMITS.png" alt="g" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="37"><div>
+        <section>
+			<header>
+				<h2>GitHub</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/GITHUB_PUNCH.png" alt="g" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="38"><div>
+        <section>
+			<header>
+				<h2>FishEye</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/FISHEYE.png" alt="g" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="39"><div>
+        <section>
+			<header>
+				<h2>Gource</h2>
+			</header>    
+            <blockquote>
+ <p>Software projects are displayed by Gource as an animated tree with the root directory of the project at its centre.<br />Directories appear as branches with files as leaves.<br />Developers can be seen working on the tree at the times they contributed to the project. </p> 
+</blockquote>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="40"><div>
+        <section>
+			<header>
+				<h2>Launch gource</h2>
+			</header>    
+            <pre>
+<code>gource -s 0.1 -1280x720 </code>
+<code>gource --output-custom-log log1.txt </code>
+<code>gource -s 0.1 -1280x720 log1.txt</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="41"><div>
+        <section>
+			<header>
+				<h2>Log format</h2>
+			</header>    
+            <pre>
+<code>1444125624|Luke Daley|M|/ratpack-core/.../WiretapPublisher.java</code>
+<code>1444125624|Luke Daley|M|/ratpack-core/.../YieldingPublisher.java</code>
+<code>1444306114|Stian Lindhom|M|/ratpack-manual/.../13-http.md</code>
+<code>1444312172|Andrey Antukh|M|/ratpack-core/.../WebSocketEngine.java</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="42"><div>
+        <section>
+			<header>
+				<h2>Demo</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="43"><div>
+        <section>
+			<header>
+				<h2>Metrics</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="44"><div>
+        <section>
+			<header>
+				<h2>SonarQube</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/SONAR_TREE_MAP.png" alt="a" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="45"><div>
+        <section>
+			<header>
+				<h2>Demo</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="46"><div>
+        <section>
+			<header>
+				<h2>Supported langauges I</h2>
+			</header>    
+            <ul> 
+ <li>ABAP (comercial)</li> 
+ <li>Android</li> 
+ <li>C/C++ (comercial)</li> 
+ <li>C#</li> 
+ <li>COBOL (comercial)</li> 
+ <li>Flex</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="47"><div>
+        <section>
+			<header>
+				<h2>Supported langauges II</h2>
+			</header>    
+            <ul> 
+ <li>Groovy</li> 
+ <li>Java</li> 
+ <li>JavaScript</li> 
+ <li>Objective-C (comercial)</li> 
+ <li>PHP</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="48"><div>
+        <section>
+			<header>
+				<h2>Supported langauges II</h2>
+			</header>    
+            <ul> 
+ <li>PL/I (comercial)</li> 
+ <li>PL/SQL (comercial)</li> 
+ <li>Python</li> 
+ <li>RPG (comercial)</li> 
+ <li><p>Swift (comercial)</p> </li>
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="49"><div>
+        <section>
+			<header>
+				<h2>Supported langauges II</h2>
+			</header>    
+            <li><p>VB.NET (comercial)</p></li> 
+<li>Visual Basic 6 (comercial)</li> 
+<li>Web (HTML, JSP/JSF)</li> 
+<li>XML</li>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="50"><div>
+        <section>
+			<header>
+				<h2>Extracting data</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/SONAR_API.png" alt="s" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="51"><div>
+        <section>
+			<header>
+				<h2>Structure</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="52"><div>
+        <section>
+			<header>
+				<h2>Saikuro</h2>
+			</header>    
+            <ul> 
+ <li><a href="https://github.com/ThoughtWorksStudios/saikuro_treemap">https://github.com/ThoughtWorksStudios/saikuro_treemap</a></li> 
+ <li><a href="https://www.youtube.com/watch?v=iiIytERhV9o">https://www.youtube.com/watch?v=iiIytERhV9o</a></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="53"><div>
+        <section>
+			<header>
+				<h2>Structure101</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/S101.png" alt="s101" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="54"><div>
+        <section>
+			<header>
+				<h2>Stan4j</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="55"><div>
+        <section>
+			<header>
+				<h2>Graphs are everywhere!</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/GRAPHS.jpg" alt="g" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="56"><div>
+        <section>
+			<header>
+				<h2>AST</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/AST.png" alt="ast" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="57"><div>
+        <section>
+			<header>
+				<h2>jQAssistant</h2>
+			</header>    
+            <blockquote>
+ <p>jQAssistant is a QA tool which allows the definition and validation of project specific rules on a structural level.<br />It is built upon the graph database Neo4j and can easily be plugged into the build process to automate detection of constraint violations and generate reports about user defined concepts and metrics.</p> 
+</blockquote>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="58"><div>
+        <section>
+			<header>
+				<h2>Query your code</h2>
+			</header>    
+            <pre>
+<code>MATCH</code>
+<code>  (class:Class)-[:DECLARES]-&gt;(method:Method)</code>
+<code>RETURN</code>
+<code>  class.fqn, count(method) as Methods</code>
+<code>ORDER BY</code>
+<code>  Methods DESC</code>
+<code>LIMIT 20</code>
+</pre>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="59"><div>
+        <section>
+			<header>
+				<h2>neo4j</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/NEO4j.png" alt="n" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="60"><div>
+        <section>
+			<header>
+				<h2>Demo</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="61"><div>
+        <section>
+			<header>
+				<h2>That's it!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="62"><div>
+        <section>
+			<header>
+				<h2>Conclusion</h2>
+			</header>    
+            <ul> 
+ <li>Extract data from your code!</li> 
+ <li>Visualize it!</li> 
+ <li>Search for new facts and knowledge!</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="63"><div>
+        <section>
+			<header>
+				<h2>Reading material</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="64"><div>
+        <section>
+			<header>
+				<h2>D3 Cookbook</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_D3_COOKBOOK.png" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="65"><div>
+        <section>
+			<header>
+				<h2>D3 Tips & Tricks</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_D3_TRICKS.png" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="66"><div>
+        <section>
+			<header>
+				<h2>Metrics and models in SQE</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_METRICS.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="67"><div>
+        <section>
+			<header>
+				<h2>Software metrics and metrology</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_METROLOGY.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="68"><div>
+        <section>
+			<header>
+				<h2>Cool infographics</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_COOL_INFOGRAPHICS.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="69"><div>
+        <section>
+			<header>
+				<h2>The infographic history of the world</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_HISTORY.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="70"><div>
+        <section>
+			<header>
+				<h2>Infographica</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_INFOGRAFICA.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="71"><div>
+        <section>
+			<header>
+				<h2>Information is beautiful</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_INFORMATION.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="72"><div>
+        <section>
+			<header>
+				<h2>Knowledge is beautiful</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_KNOWLEDGE.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="73"><div>
+        <section>
+			<header>
+				<h2>Show me numbers</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_NUMBERS.jpg" alt="book" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="74"><div>
+        <section>
+			<header>
+				<h2>Links: images</h2>
+			</header>    
+            <ul> 
+ <li><a href="http://abstrusegoose.com/432">http://abstrusegoose.com/432</a></li> 
+ <li><a href="http://camarenaphoto.tumblr.com/post/112238079516/its-life-jim-but-not-as-we-know-it-spock">http://camarenaphoto.tumblr.com/post/112238079516/its-life-jim-but-not-as-we-know-it-spock</a></li> 
+ <li><a href="http://technology.ie/big-data-looks-like/">http://technology.ie/big-data-looks-like/</a></li> 
+ <li><a href="http://www.informationisbeautiful.net/visualizations/million-lines-of-code/">http://www.informationisbeautiful.net/visualizations/million-lines-of-code/</a></li> 
+ <li><a href="http://githut.info/">http://githut.info/</a></li> 
+ <li><a href="http://emmanueloga.com/2013/10/07/Graphs-are-Everywhere-An-overview-of-GraphConnect-San-Francisco-2013.html">http://emmanueloga.com/2013/10/07/Graphs-are-Everywhere-An-overview-of-GraphConnect-San-Francisco-2013.html</a></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="75"><div>
+        <section>
+			<header>
+				<h2>Links: tools</h2>
+			</header>    
+            <ul> 
+ <li><a href="https://github.com/AlDanial/cloc">https://github.com/AlDanial/cloc</a></li> 
+ <li><a href="http://gource.io/">http://gource.io/</a></li> 
+ <li><a href="http://d3js.org/">http://d3js.org/</a></li> 
+ <li><a href="http://visjs.org/">http://visjs.org/</a></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="76"><div>
+        <section>
+			<header>
+				<h2>Links: tools</h2>
+			</header>    
+            <ul> 
+ <li><a href="http://www.sonarqube.org/">http://www.sonarqube.org/</a></li> 
+ <li><a href="https://www.atlassian.com/pt/software/fisheye/overview">https://www.atlassian.com/pt/software/fisheye/overview</a></li> 
+ <li><a href="http://jqassistant.org/">http://jqassistant.org/</a></li> 
+ <li><a href="http://neo4j.com/">http://neo4j.com/</a></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="77"><div>
+        <section>
+			<header>
+				<h2>Links: tools</h2>
+			</header>    
+            <ul> 
+ <li><a href="https://github.com/ThoughtWorksStudios/saikuro_treemap">https://github.com/ThoughtWorksStudios/saikuro_treemap</a></li> 
+ <li><a href="https://www.youtube.com/watch?v=iiIytERhV9o">https://www.youtube.com/watch?v=iiIytERhV9o</a></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="78"><div>
+        <section>
+			<header>
+				<h2>Danke schön!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="79"><div>
+        <section>
+			<header>
+				<h2>Thank you!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="80"><div>
+        <section>
+			<header>
+				<h2>Questions?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+		
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
